@@ -1,13 +1,21 @@
 package np.com.rabin.springbatchdemo.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="customer")
+@Table(name = "CUSTOMERS")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
+
     @Id
     @Column(name = "CUSTOMER_ID")
     private int id;
@@ -25,5 +33,6 @@ public class Customer {
     private String country;
     @Column(name = "DOB")
     private String dob;
+
 
 }
